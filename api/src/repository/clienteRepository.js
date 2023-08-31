@@ -6,11 +6,11 @@ export async function InserirCliente(cliente){
         values(?, ?, ?, ?, ?);    
     ` 
    const [linhas] = await con.query(resposta, [
-    cliente.nome,
-    cliente.email,
-    cliente.telefone,
-    cliente.cpf,
-    cliente.cnh
+            cliente.nome,
+            cliente.email,
+            cliente.telefone,
+            cliente.cpf,
+            cliente.cnh
    ]);
         
    cliente.id = linhas.InsertId;
